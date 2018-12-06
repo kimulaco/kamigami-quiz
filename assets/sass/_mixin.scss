@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+@mixin hover() {
+  &:hover,
+  &:active,
+  &:focus {
+    @content;
+  }
+}
+
+@mixin media() {
+  @media screen and (min-width: $BREAK_POINT) {
+    @content;
+  }
+}
+
+@mixin reset-child-margin() {
+  > * {
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

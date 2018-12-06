@@ -1,0 +1,36 @@
+{
+  "name": "kamigami-quiz",
+  "version": "0.1.0",
+  "description": "「神の一覧 - Wikipedia」の情報を元に作成したジョーククイズサイト。",
+  "author": "kmrk",
+  "private": true,
+  "scripts": {
+    "dev": "npm run update && nuxt",
+    "build": "npm run update && nuxt build",
+    "start": "nuxt start",
+    "generate": "npm run update && nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint",
+    "update": "node bin/updata.js"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "normalize.css": "^8.0.1",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "cheerio": "^1.0.0-rc.2",
+    "eslint": "^5.0.1",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-prettier": "2.6.2",
+    "eslint-plugin-vue": "^4.0.0",
+    "node-sass": "^4.10.0",
+    "nodemon": "^1.11.0",
+    "nuxt-sass-resources-loader": "^2.0.5",
+    "prettier": "1.14.3",
+    "request": "^2.88.0",
+    "sass-loader": "^7.1.0"
+  }
+}
