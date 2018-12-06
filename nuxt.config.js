@@ -1,5 +1,11 @@
 const pkg = require('./package')
 
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/kamigami-quiz/'
+  }
+} : {}
+
 module.exports = {
   mode: 'spa',
   head: {
@@ -38,6 +44,7 @@ module.exports = {
       ['@/assets/sass/_variable.scss', '@/assets/sass/_mixin.scss']
     ]
   ],
+  ...routerBase,
   generate: {
     dir: 'docs'
   },
