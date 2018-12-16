@@ -9,12 +9,18 @@
 </template>
 
 <script>
+const pkg = require('../../package.json')
+
 export default {
   name: 'ButtonShareTwitter',
   props: {
     url: {
       type: String,
       default: window.location.href
+    },
+    text: {
+      type: String,
+      default: pkg.description
     }
   },
   computed: {
@@ -22,7 +28,11 @@ export default {
       let url = 'https://twitter.com/share?'
 
       if (this.url) {
-        url += `url=${this.url}`
+        url += `url=${this.url}&`
+      }
+
+      if (this.text) {
+        url += `text=${this.text}&`
       }
 
       return url
