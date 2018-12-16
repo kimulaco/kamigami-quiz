@@ -44,12 +44,15 @@
         <button-submit>回答する</button-submit>
       </div><!-- /.c-game__submit -->
     </form><!-- /.c-game__form -->
+
+    <button-share-twitter/>
   </div><!-- /.c-game -->
 </template>
 
 <script>
 import Paragraph from '@/components/common/Paragraph.vue'
 import Box from '@/components/common/Box.vue'
+import ButtonShareTwitter from '@/components/common/ButtonShareTwitter.vue'
 import ButtonSubmit from '@/components/game/ButtonSubmit.vue'
 import Quiz from '@/components/game/Quiz.vue'
 import AnswerCounter from '@/components/game/AnswerCounter.vue'
@@ -61,6 +64,7 @@ export default {
   name: 'PageGame',
   components: {
     Paragraph,
+    ButtonShareTwitter,
     Box,
     ButtonSubmit,
     Quiz,
