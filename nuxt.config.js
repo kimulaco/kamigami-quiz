@@ -1,4 +1,5 @@
 const pkg = require('./package')
+const siteTitle = '神々のクイズ'
 
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
@@ -9,7 +10,7 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 module.exports = {
   mode: 'spa',
   head: {
-    title: '神々のクイズ',
+    title: siteTitle,
     meta: [
       {
         charset: 'utf-8'
@@ -26,6 +27,30 @@ module.exports = {
         hid: 'description',
         name: 'description',
         content: pkg.description
+      },
+      {
+        property: 'og:type',
+        content: 'website'
+      },
+      {
+        property: 'og:title',
+        content: siteTitle
+      },
+      {
+        property: 'og:site_name',
+        content: siteTitle
+      },
+      {
+        property: 'og:description',
+        content: pkg.description
+      },
+      {
+        property: 'og:url',
+        content: 'https://kmrk.github.io/kamigami-quiz/'
+      },
+      {
+        property: 'og:image',
+        content: '/kamigami-quiz/ogp.png'
       }
     ],
     bodyAttrs: {
