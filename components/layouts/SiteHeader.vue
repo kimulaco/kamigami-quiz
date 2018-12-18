@@ -19,9 +19,9 @@ export default {
 
 <style lang="scss" scoped>
 .c-site-header {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(#fff, 0.95);
   width: 100%;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 3px rgba(#000, 0.1);
   position: fixed;
   top: 0;
   left: 0;

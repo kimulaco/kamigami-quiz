@@ -34,6 +34,7 @@
         :title="isSubmited ? '正解' : '問'"
         :current="isSubmited ? correctLeng : currentAnswerIndex"
         :max="quizLeng"
+        :is-answerd="isSubmited"
       />
 
       <div
@@ -46,6 +47,7 @@
     </form><!-- /.c-game__form -->
 
     <button-share-twitter/>
+    <button-share-facebook/>
   </div><!-- /.c-game -->
 </template>
 
@@ -53,6 +55,7 @@
 import Paragraph from '@/components/common/Paragraph.vue'
 import Box from '@/components/common/Box.vue'
 import ButtonShareTwitter from '@/components/common/ButtonShareTwitter.vue'
+import ButtonShareFacebook from '@/components/common/ButtonShareFacebook.vue'
 import ButtonSubmit from '@/components/game/ButtonSubmit.vue'
 import Quiz from '@/components/game/Quiz.vue'
 import AnswerCounter from '@/components/game/AnswerCounter.vue'
@@ -65,6 +68,7 @@ export default {
   components: {
     Paragraph,
     ButtonShareTwitter,
+    ButtonShareFacebook,
     Box,
     ButtonSubmit,
     Quiz,
