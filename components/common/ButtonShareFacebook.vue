@@ -4,7 +4,14 @@
     target="_blank"
     class="c-button-share-facebook"
   >
-    <span class="c-button-share-facebook__inner">Facebookでシェアする</span>
+    <span class="c-button-share-facebook__inner">
+      <img
+        src="@/assets/img/icon-facebook.png"
+        title="Facebookでシェアする"
+        alt="Facebookでシェアする"
+        class="c-button-share-facebook__icon"
+      ><!-- /.c-button-share-facebook__icon -->
+    </span>
   </a><!-- /.c-button-share-facebook -->
 </template>
 
@@ -32,4 +39,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.c-button-share-facebook {
+  display: inline-block;
+
+  &__inner {
+    display: block;
+    width: 30px;
+  }
+}
 </style>

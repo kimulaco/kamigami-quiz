@@ -46,14 +46,17 @@
       </div><!-- /.c-game__submit -->
     </form><!-- /.c-game__form -->
 
-    <button-share-twitter/>
-    <button-share-facebook/>
+    <button-share-list>
+      <button-share-twitter/>
+      <button-share-facebook/>
+    </button-share-list>
   </div><!-- /.c-game -->
 </template>
 
 <script>
 import Paragraph from '@/components/common/Paragraph.vue'
 import Box from '@/components/common/Box.vue'
+import ButtonShareList from '@/components/common/ButtonShareList.vue'
 import ButtonShareTwitter from '@/components/common/ButtonShareTwitter.vue'
 import ButtonShareFacebook from '@/components/common/ButtonShareFacebook.vue'
 import ButtonSubmit from '@/components/game/ButtonSubmit.vue'
@@ -67,6 +70,7 @@ export default {
   name: 'PageGame',
   components: {
     Paragraph,
+    ButtonShareList,
     ButtonShareTwitter,
     ButtonShareFacebook,
     Box,

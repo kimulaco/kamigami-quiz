@@ -4,7 +4,14 @@
     target="_blank"
     class="c-button-share-twitter"
   >
-    <span class="c-button-share-twitter__inner">ツイートする</span>
+    <span class="c-button-share-twitter__inner">
+      <img
+        src="@/assets/img/icon-twitter.png"
+        title="ツイートする"
+        alt="ツイートする"
+        class="c-button-share-twitter__icon"
+      ><!-- /.c-button-share-twitter__icon -->
+    </span><!-- /.c-button-share-twitter__inner -->
   </a><!-- /.c-button-share-twitter -->
 </template>
 
@@ -42,4 +49,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.c-button-share-twitter {
+  display: inline-block;
+
+  &__inner {
+    display: block;
+    width: 30px;
+  }
+}
 </style>
