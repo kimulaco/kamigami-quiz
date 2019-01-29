@@ -38,7 +38,7 @@
       />
 
       <div
-        v-if="isAllAnswered"
+        v-if="isAllAnswered && !isSubmited"
         id="submit"
         class="c-game__submit"
       >

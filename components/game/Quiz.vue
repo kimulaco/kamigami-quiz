@@ -28,7 +28,6 @@
       </li><!-- /.c-quiz__item -->
     </ul><!-- /.c-quiz__list -->
 
-
     <box
       v-if="isAnswered"
       :type="state"
@@ -145,8 +144,8 @@ export default {
     }
 
     &-index {
-      width: 80px;
-      min-width: 80px;
+      width: 84px;
+      min-width: 84px;
     }
   }
 

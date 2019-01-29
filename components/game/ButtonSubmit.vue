@@ -44,6 +44,7 @@ export default {
   border: 2px solid #e8b026;
   text-align: center;
   border-radius: 4px;
+  cursor: pointer;
   transition: opacity 0.3s;
 
   @include hover() {
