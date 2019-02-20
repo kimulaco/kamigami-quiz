@@ -16,10 +16,6 @@ module.exports = {
         charset: 'utf-8'
       },
       {
-        name: 'robots',
-        content: 'noindex,nofollow'
-      },
-      {
         name: 'viewport',
         content: 'width=device-width,initial-scale=1'
       },
@@ -46,7 +42,7 @@ module.exports = {
       },
       {
         property: 'og:url',
-        content: 'https://kmrk.github.io/kamigami-quiz/'
+        content: 'https://kimulaco.github.io/kamigami-quiz/'
       },
       {
         property: 'og:image',
@@ -61,20 +57,28 @@ module.exports = {
   loading: {
     color: '#fff'
   },
-  css: ['normalize.css', '@/assets/sass/_elements.scss'],
+  css: [
+    'normalize.css',
+    '@/assets/sass/_elements.scss'
+  ],
   plugins: [],
   modules: [
-    [
-      'nuxt-sass-resources-loader',
-      ['@/assets/sass/_variable.scss', '@/assets/sass/_mixin.scss']
-    ]
+    '@nuxtjs/style-resources'
   ],
+  styleResources: {
+    sass: [
+      '@/assets/sass/_variable.scss',
+      '@/assets/sass/_mixin.scss'
+    ]
+  },
   ...routerBase,
   generate: {
     dir: 'docs'
   },
   build: {
-    vendor: ['vuex'],
+    vendor: [
+      'vuex'
+    ],
     extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
