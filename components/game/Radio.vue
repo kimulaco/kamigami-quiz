@@ -43,11 +43,6 @@ export default {
   overflow: hidden;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
   transition: box-shadow 0.3s;
-  cursor: pointer;
-
-  @include hover() {
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
-  }
 
   &__label {
     display: flex;
@@ -58,9 +53,14 @@ export default {
     padding: 10px;
     border: 1px solid #999;
     border-radius: 2px;
+    cursor: pointer;
 
     @include media() {
       padding: 16px 10px;
+    }
+
+    @include hover() {
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
     }
   }
 
@@ -68,6 +68,14 @@ export default {
     opacity: 0;
     position: absolute;
     left: -100vw;
+
+    &[disabled] + .c-radio__label {
+      cursor: default;
+
+      @include hover() {
+        box-shadow: none;
+      }
+    }
 
     &:focus + .c-radio__label {
       background: #fcfcfc;
