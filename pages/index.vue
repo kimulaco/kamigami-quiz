@@ -186,6 +186,31 @@ export default {
       this.isSubmited = true
 
       smoothScroll.scrollTop()
+
+      try {
+        liff.init(data => {
+          this.sendLineMessage(data)
+        }, error => {
+          throw error
+        })
+      } catch (error) {}
+    },
+    async sendLineMessage(data) {
+      try {
+        const profile = await liff.getProfile()
+        const messageResult = await liff.sendMessages([
+          {
+            type: 'text',
+            text: `${profile.displayName}さん！\nおめでとうございます！`
+          },
+          {
+            type: 'text',
+            text: `${this.quizLeng}問中 ${this.correctLeng}問正解しました！`
+          }
+        ])
+
+        liff.closeWindow()
+      } catch (error) {}
     }
   }
 }

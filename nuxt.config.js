@@ -11,6 +11,9 @@ module.exports = {
   mode: 'spa',
   head: {
     title: siteTitle,
+    htmlAttrs: {
+      lang: 'ja'
+    },
     meta: [
       {
         charset: 'utf-8'
@@ -49,36 +52,27 @@ module.exports = {
         content: '/kamigami-quiz/ogp.png'
       }
     ],
-    bodyAttrs: {
-      lang: 'ja',
-      class: 'app'
-    }
+    script: [
+      {
+        src: 'https://d.line-scdn.net/liff/1.0/sdk.js'
+      }
+    ]
   },
   loading: {
     color: '#fff'
   },
-  css: [
-    'normalize.css',
-    '@/assets/sass/_elements.scss'
-  ],
+  css: ['normalize.css', '@/assets/sass/_elements.scss'],
   plugins: [],
-  modules: [
-    '@nuxtjs/style-resources'
-  ],
+  modules: ['@nuxtjs/style-resources'],
   styleResources: {
-    sass: [
-      '@/assets/sass/_variable.scss',
-      '@/assets/sass/_mixin.scss'
-    ]
+    sass: ['@/assets/sass/_variable.scss', '@/assets/sass/_mixin.scss']
   },
   ...routerBase,
   generate: {
     dir: 'docs'
   },
   build: {
-    vendor: [
-      'vuex'
-    ],
+    vendor: ['vuex'],
     extend(config, ctx) {
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
