@@ -26,10 +26,10 @@ export default {
   },
   computed: {
     href() {
-      let url = 'https://www.facebook.com/sharer/sharer.php?u='
+      let url = 'https://www.facebook.com/sharer/sharer.php?'
 
       if (this.url) {
-        url += `url=${this.url}&`
+        url += `u=${this.url}`
       }
 
       return url
