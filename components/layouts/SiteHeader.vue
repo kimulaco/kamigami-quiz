@@ -5,7 +5,7 @@
         <router-link
           to="/"
           class="c-site-header__title-anchor"
-        >神々のクイズ α</router-link>
+        >神々のクイズ</router-link>
       </h1><!-- /.c-site-header__title -->
     </div><!-- /.c-site-header__inner -->
   </header><!-- /.c-site-header -->

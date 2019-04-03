@@ -1,6 +1,6 @@
 {
   "name": "kamigami-quiz",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "「神の一覧 - Wikipedia」の情報を元に作成したジョーククイズサイト。",
   "author": "kimulaco",
   "private": true,
