@@ -63,9 +63,12 @@ module.exports = {
   },
   css: ['normalize.css', '@/assets/sass/_elements.scss'],
   plugins: [],
-  modules: ['@nuxtjs/style-resources'],
+  modules: ['@nuxtjs/style-resources', '@nuxtjs/google-analytics'],
   styleResources: {
     sass: ['@/assets/sass/_variable.scss', '@/assets/sass/_mixin.scss']
+  },
+  googleAnalytics: {
+    id: 'UA-137699651-1'
   },
   ...routerBase,
   generate: {
